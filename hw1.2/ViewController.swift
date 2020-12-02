@@ -8,16 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    var count = 1
-
+    
+    // MARK: - IB Outlets
     @IBOutlet var redLightView: UIView!
     @IBOutlet var yellowLightView: UIView!
     @IBOutlet var greenLightView: UIView!
     
     @IBOutlet var startButton: UIButton!
     
+    //MARK: - Public Properties
+    var count = 1
     
+    //MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,6 +40,7 @@ class ViewController: UIViewController {
     }
     
     
+    // MARK: - IB Actions
     @IBAction func startButtonPressed() {
         startButton.setTitle("Next", for: UIControl.State.normal)
     
@@ -63,11 +66,7 @@ class ViewController: UIViewController {
         count = 1
         }
         
-        
     }
-        
-
-    
 
 }
 
