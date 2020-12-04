@@ -18,14 +18,23 @@ class ViewController: UIViewController {
     @IBOutlet var yellowLightView: UIView!
     @IBOutlet var greenLightView: UIView!
     
+    @IBOutlet var redPointsLabel: UILabel!
+    @IBOutlet var greenPointsLabel: UILabel!
+    @IBOutlet var bluePointsLabel: UILabel!
+    
+    @IBOutlet var redSlider: UISlider!
+    @IBOutlet var greenSlider: UISlider!
+    @IBOutlet var blueSlider: UISlider!
+    
+    
     @IBOutlet var startButton: UIButton!
     
-    //MARK: - Public Properties
+    // MARK: - Public Properties
     var currentLight = CurrentLight.red
     let lightIsOn: CGFloat = 1
     let lightIsOff: CGFloat = 0.2
     
-    //MARK: - Life Cycles Methods
+    // MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +49,19 @@ class ViewController: UIViewController {
         
         greenLightView.backgroundColor = UIColor.systemGreen
         greenLightView.alpha = lightIsOff
+        
+        // MARK: Sliders
+        redSlider.minimumValue = 0
+        redSlider.maximumValue = 255
+        redSlider.value = 0
+        
+        greenSlider.minimumValue = 0
+        greenSlider.maximumValue = 255
+        greenSlider.value = 0
+        
+        blueSlider.minimumValue = 0
+        blueSlider.maximumValue = 255
+        blueSlider.value = 0
         
     }
     
@@ -73,6 +95,21 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func redSliderAction(_ sender: Any) {
+        redPointsLabel.text = String(NSString(format: "%0.2f", redSlider.value))
+    }
+    
+    @IBAction func greenSliderAction(_ sender: Any) {
+        greenPointsLabel.text = String(NSString(format: "%0.2f", greenSlider.value))
+    }
+    
+    @IBAction func blueSliderAction(_ sender: Any) {
+        bluePointsLabel.text = String(NSString(format: "%0.2f", blueSlider.value))
+    }
+    
+    
+    
 
 }
 

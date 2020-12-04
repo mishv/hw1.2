@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hw1_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGe-2h-ROh">
-                                <rect key="frame" x="109" y="762" width="196" height="60"/>
+                                <rect key="frame" x="98.5" y="582.5" width="178" height="44.5"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -28,21 +28,21 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="G4j-F9-TLt">
-                                <rect key="frame" x="20" y="122" width="374" height="100"/>
+                                <rect key="frame" x="20" y="78" width="335" height="87"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSS-Qy-Z7H">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="87" height="87"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ZSS-Qy-Z7H" secondAttribute="height" multiplier="1:1" id="gFI-0z-e3r"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vWF-il-evm">
-                                        <rect key="frame" x="137" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="124" y="0.0" width="87" height="87"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntl-U9-y9v">
-                                        <rect key="frame" x="274" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="248" y="0.0" width="87" height="87"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ntl-U9-y9v" secondAttribute="height" multiplier="1:1" id="aik-pl-wEf"/>
@@ -51,7 +51,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="yj1-Lu-XFL">
-                                <rect key="frame" x="20" y="312" width="104" height="111.5"/>
+                                <rect key="frame" x="20" y="255" width="104" height="111.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="FUR-qK-T6K">
                                         <rect key="frame" x="0.0" y="0.0" width="46.5" height="111.5"/>
@@ -102,13 +102,22 @@
                                 </subviews>
                             </stackView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Af5-mY-TaV">
-                                <rect key="frame" x="142" y="306" width="254" height="31"/>
+                                <rect key="frame" x="142" y="249" width="215" height="31"/>
+                                <connections>
+                                    <action selector="redSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="3dK-B0-gZe"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JEr-UA-Kvs">
-                                <rect key="frame" x="142" y="352" width="254" height="31"/>
+                                <rect key="frame" x="142" y="295" width="215" height="31"/>
+                                <connections>
+                                    <action selector="greenSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Rcu-nZ-uwM"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="irI-2G-3n5">
-                                <rect key="frame" x="142" y="398" width="254" height="31"/>
+                                <rect key="frame" x="142" y="341" width="215" height="31"/>
+                                <connections>
+                                    <action selector="blueSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="SP0-iw-V2w"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -126,17 +135,23 @@
                             <constraint firstItem="yj1-Lu-XFL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kK0-FQ-ad7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G4j-F9-TLt" secondAttribute="trailing" constant="20" id="lIm-Bd-9Ip"/>
                             <constraint firstItem="gGe-2h-ROh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0669643" id="m4E-Nw-1IN"/>
-                            <constraint firstItem="JEr-UA-Kvs" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" constant="20" id="pGZ-VU-2QY"/>
-                            <constraint firstItem="irI-2G-3n5" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" constant="20" id="qqQ-Zb-Y7P"/>
+                            <constraint firstItem="JEr-UA-Kvs" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" priority="250" constant="20" id="pGZ-VU-2QY"/>
+                            <constraint firstItem="irI-2G-3n5" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" priority="250" constant="20" id="qqQ-Zb-Y7P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JEr-UA-Kvs" secondAttribute="trailing" constant="20" id="qx2-sz-mcA"/>
                             <constraint firstItem="yj1-Lu-XFL" firstAttribute="top" secondItem="G4j-F9-TLt" secondAttribute="bottom" priority="750" constant="90" id="rIb-gs-ovL"/>
                             <constraint firstItem="G4j-F9-TLt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vcC-x2-vs4"/>
-                            <constraint firstItem="Af5-mY-TaV" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" constant="20" id="vj1-mc-Arc"/>
+                            <constraint firstItem="Af5-mY-TaV" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" priority="250" constant="20" id="vj1-mc-Arc"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bluePointsLabel" destination="nY4-r6-ICy" id="MgN-VP-e4i"/>
+                        <outlet property="blueSlider" destination="irI-2G-3n5" id="0yf-r8-SuP"/>
                         <outlet property="greenLightView" destination="ntl-U9-y9v" id="KYe-eh-LCw"/>
+                        <outlet property="greenPointsLabel" destination="6gB-HK-hBS" id="GUh-FB-4mr"/>
+                        <outlet property="greenSlider" destination="JEr-UA-Kvs" id="Q4m-AU-CPn"/>
                         <outlet property="redLightView" destination="ZSS-Qy-Z7H" id="VCL-bi-H3q"/>
+                        <outlet property="redPointsLabel" destination="mSQ-zg-cwd" id="9aO-Zr-lvW"/>
+                        <outlet property="redSlider" destination="Af5-mY-TaV" id="b1S-2s-5xC"/>
                         <outlet property="startButton" destination="gGe-2h-ROh" id="ZwR-xl-eH0"/>
                         <outlet property="yellowLightView" destination="vWF-il-evm" id="RMH-xk-Njx"/>
                     </connections>
