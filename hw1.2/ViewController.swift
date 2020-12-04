@@ -7,6 +7,10 @@
 
 import UIKit
 
+enum CurrentLight {
+    case red, yellow, green
+}
+
 class ViewController: UIViewController {
     
     // MARK: - IB Outlets
@@ -17,53 +21,55 @@ class ViewController: UIViewController {
     @IBOutlet var startButton: UIButton!
     
     //MARK: - Public Properties
-    var count = 1
+    var currentLight = CurrentLight.red
+    let lightIsOn: CGFloat = 1
+    let lightIsOff: CGFloat = 0.2
     
     //MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-        startButton.setTitle("Start", for: UIControl.State.normal)
+        startButton.setTitle("Start", for: .normal)
         startButton.layer.cornerRadius = 7
         
-        redLightView.layer.cornerRadius = redLightView.frame.width / 2
-        redLightView.backgroundColor = UIColor.systemRed.withAlphaComponent(0.3)
+        redLightView.backgroundColor = UIColor.systemRed
+        redLightView.alpha = lightIsOff
         
-        yellowLightView.layer.cornerRadius = yellowLightView.frame.width / 2
-        yellowLightView.backgroundColor = UIColor.systemYellow.withAlphaComponent(0.3)
+        yellowLightView.backgroundColor = UIColor.systemYellow
+        yellowLightView.alpha = lightIsOff
         
-        
-        greenLightView.layer.cornerRadius = greenLightView.frame.width / 2
-        greenLightView.backgroundColor = UIColor.systemGreen.withAlphaComponent(0.3)
+        greenLightView.backgroundColor = UIColor.systemGreen
+        greenLightView.alpha = lightIsOff
         
     }
     
+    override func viewWillLayoutSubviews() {
+        redLightView.layer.cornerRadius = redLightView.frame.width / 2
+        yellowLightView.layer.cornerRadius = yellowLightView.frame.width / 2
+        greenLightView.layer.cornerRadius = greenLightView.frame.width / 2
+        
+    }
     
     // MARK: - IB Actions
     @IBAction func startButtonPressed() {
-        startButton.setTitle("Next", for: UIControl.State.normal)
+        startButton.setTitle("Next", for: .normal)
     
-        switch count {
-        case 1:
-            greenLightView.backgroundColor = UIColor.systemGreen.withAlphaComponent(0.3)
-            redLightView.backgroundColor = UIColor.systemRed.withAlphaComponent(1)
-            break
-        case 2:
-            redLightView.backgroundColor = UIColor.systemRed.withAlphaComponent(0.3)
-            yellowLightView.backgroundColor = UIColor.systemYellow.withAlphaComponent(1)
+        switch currentLight {
+        case .red:
+            greenLightView.alpha = lightIsOff
+            redLightView.alpha = lightIsOn
+            currentLight = .yellow
+            
+        case .yellow:
+            redLightView.alpha = lightIsOff
+            yellowLightView.alpha = lightIsOn
+            currentLight = .green
 
-        case 3:
-            yellowLightView.backgroundColor = UIColor.systemYellow.withAlphaComponent(0.3)
-            greenLightView.backgroundColor = UIColor.systemGreen.withAlphaComponent(1)
-        default:
-            return
-        }
-        
-        if count != 3 {
-            count += 1
-        } else {
-        count = 1
+        case .green:
+            yellowLightView.alpha = lightIsOff
+            greenLightView.alpha = lightIsOn
+            currentLight = .red
+            
         }
         
     }
