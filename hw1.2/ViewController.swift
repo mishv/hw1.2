@@ -34,9 +34,9 @@ class ViewController: UIViewController {
     let lightIsOn: CGFloat = 1
     let lightIsOff: CGFloat = 0.2
     
-    var redColorPoint: CGFloat = 0
-    var greenColorPoint: CGFloat = 0
-    var blueColorPoint: CGFloat = 0
+//    var redColorPoint: CGFloat = 0
+//    var greenColorPoint: CGFloat = 0
+//    var blueColorPoint: CGFloat = 0
     
     var currentView: UIView?
     
@@ -53,6 +53,21 @@ class ViewController: UIViewController {
     var thirdViewBP: CGFloat = 0
     
     
+    var firstRedLabel: String = "0.00"
+    var firstGreenLabel: String = "0.00"
+    var firstBlueLabel: String = "0.00"
+    
+    var secondRedLabel: String = "0.00"
+    var secondGreenLabel: String = "0.00"
+    var secondBlueLabel: String = "0.00"
+    
+    var thirdRedLabel: String = "0.00"
+    var thirdGreenLabel: String = "0.00"
+    var thirdBlueLabel: String = "0.00"
+    
+    
+    
+    
     
     // MARK: - Life Cycles Methods
     override func viewDidLoad() {
@@ -65,8 +80,10 @@ class ViewController: UIViewController {
         startButton.setTitle("Start", for: .normal)
         startButton.layer.cornerRadius = 7
         
-        
         redLightView.alpha = lightIsOff
+        yellowLightView.alpha = lightIsOff
+        greenLightView.alpha = lightIsOff
+        
 //        redLightView.backgroundColor = UIColor(red: redColorPoint, green: greenColorPoint, blue: blueColorPoint, alpha: 5)
         
 //        yellowLightView.backgroundColor = UIColor.systemYellow
@@ -109,13 +126,18 @@ class ViewController: UIViewController {
         case .first:
             greenLightView.alpha = lightIsOff
             redLightView.alpha = lightIsOn
+            
             currentLight = .second
             currentView = redLightView
+            
             redSlider.value = Float(firstViewRP)
             greenSlider.value = Float(firstViewGP)
             blueSlider.value = Float(firstViewBP)
             
-            
+            redPointsLabel.text = firstRedLabel
+            greenPointsLabel.text = firstGreenLabel
+            bluePointsLabel.text = firstBlueLabel
+
         case .second:
             redLightView.alpha = lightIsOff
             yellowLightView.alpha = lightIsOn
@@ -124,6 +146,10 @@ class ViewController: UIViewController {
             redSlider.value = Float(secondViewRP)
             greenSlider.value = Float(secondViewGP)
             blueSlider.value = Float(secondViewBP)
+            
+            redPointsLabel.text = secondRedLabel
+            greenPointsLabel.text = secondGreenLabel
+            bluePointsLabel.text = secondBlueLabel
 
         case .third:
             yellowLightView.alpha = lightIsOff
@@ -133,6 +159,10 @@ class ViewController: UIViewController {
             redSlider.value = Float(thirdViewRP)
             greenSlider.value = Float(thirdViewGP)
             blueSlider.value = Float(thirdViewBP)
+            
+            redPointsLabel.text = thirdRedLabel
+            greenPointsLabel.text = thirdGreenLabel
+            bluePointsLabel.text = thirdBlueLabel
             
         }
         
@@ -147,12 +177,22 @@ class ViewController: UIViewController {
         case redLightView:
             firstViewRP = CGFloat(redSlider.value)
             currentView?.backgroundColor = UIColor(red: firstViewRP/255, green: firstViewGP/255, blue: firstViewBP/255, alpha: 1)
+            redPointsLabel.text = String(NSString(format: "%0.2f", redSlider.value))
+            firstRedLabel = String(NSString(format: "%0.2f", redSlider.value))
+            
         case yellowLightView:
             secondViewRP = CGFloat(redSlider.value)
             currentView?.backgroundColor = UIColor(red: secondViewRP/255, green: secondViewGP/255, blue: secondViewBP/255, alpha: 1)
+            redPointsLabel.text = String(NSString(format: "%0.2f", redSlider.value))
+            secondRedLabel = String(NSString(format: "%0.2f", redSlider.value))
+            
         case greenLightView:
             thirdViewRP = CGFloat(redSlider.value)
             currentView?.backgroundColor = UIColor(red: thirdViewRP/255, green: thirdViewGP/255, blue: thirdViewBP/255, alpha: 1)
+            redPointsLabel.text = String(NSString(format: "%0.2f", redSlider.value))
+            thirdRedLabel = String(NSString(format: "%0.2f", redSlider.value))
+            
+            
         default:
             return
         }
@@ -167,12 +207,21 @@ class ViewController: UIViewController {
         case redLightView:
             firstViewGP = CGFloat(greenSlider.value)
             currentView?.backgroundColor = UIColor(red: firstViewRP/255, green: firstViewGP/255, blue: firstViewBP/255, alpha: 1)
+            greenPointsLabel.text = String(NSString(format: "%0.2f", greenSlider.value))
+            firstGreenLabel = String(NSString(format: "%0.2f", greenSlider.value))
+            
         case yellowLightView:
             secondViewGP = CGFloat(greenSlider.value)
             currentView?.backgroundColor = UIColor(red: secondViewRP/255, green: secondViewGP/255, blue: secondViewBP/255, alpha: 1)
+            greenPointsLabel.text = String(NSString(format: "%0.2f", greenSlider.value))
+            secondGreenLabel = String(NSString(format: "%0.2f", greenSlider.value))
+            
         case greenLightView:
             thirdViewGP = CGFloat(greenSlider.value)
             currentView?.backgroundColor = UIColor(red: thirdViewRP/255, green: thirdViewGP/255, blue: thirdViewBP/255, alpha: 1)
+            greenPointsLabel.text = String(NSString(format: "%0.2f", greenSlider.value))
+            thirdGreenLabel = String(NSString(format: "%0.2f", greenSlider.value))
+            
         default:
             return
         }
@@ -188,24 +237,26 @@ class ViewController: UIViewController {
         case redLightView:
             firstViewBP = CGFloat(blueSlider.value)
             currentView?.backgroundColor = UIColor(red: firstViewRP/255, green: firstViewGP/255, blue:  firstViewBP/255, alpha: 1)
+            bluePointsLabel.text = String(NSString(format: "%0.2f", blueSlider.value))
+            firstBlueLabel = String(NSString(format: "%0.2f", blueSlider.value))
+            
         case yellowLightView:
             secondViewBP = CGFloat(blueSlider.value)
             currentView?.backgroundColor = UIColor(red: secondViewRP/255, green: secondViewGP/255, blue:  secondViewBP/255, alpha: 1)
+            bluePointsLabel.text = String(NSString(format: "%0.2f", blueSlider.value))
+            secondBlueLabel = String(NSString(format: "%0.2f", blueSlider.value))
+            
         case greenLightView:
             thirdViewBP = CGFloat(blueSlider.value)
             currentView?.backgroundColor = UIColor(red: thirdViewRP/255, green: thirdViewGP/255, blue: thirdViewBP/255, alpha: 1)
+            bluePointsLabel.text = String(NSString(format: "%0.2f", blueSlider.value))
+            thirdBlueLabel = String(NSString(format: "%0.2f", blueSlider.value))
+            
         default:
             return
         }
     
-        
-        
     }
     
-    
-    
-    
-    
-
 }
 
