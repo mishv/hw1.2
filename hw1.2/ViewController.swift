@@ -30,6 +30,11 @@ class ViewController: UIViewController {
     @IBOutlet var startButton: UIButton!
     @IBOutlet var resetButton: UIButton!
     
+    @IBOutlet var firstLabelPointer: UILabel!
+    @IBOutlet var secondLabelPointer: UILabel!
+    @IBOutlet var thirdLabelPointer: UILabel!
+    
+    
     
     // MARK: - Public Properties
     var pointer = Pointer.first
@@ -74,6 +79,10 @@ class ViewController: UIViewController {
         redSlider.isEnabled = false
         greenSlider.isEnabled = false
         blueSlider.isEnabled = false
+        
+        firstLabelPointer.isHidden = true
+        secondLabelPointer.isHidden = true
+        thirdLabelPointer.isHidden = true
         
         startButton.setTitle("Start", for: .normal)
         startButton.layer.cornerRadius = 7
@@ -130,6 +139,9 @@ class ViewController: UIViewController {
             thirdView.alpha = lightIsOff
             firstView.alpha = lightIsOn
             
+            thirdLabelPointer.isHidden = true
+            firstLabelPointer.isHidden = false
+            
             pointer = .second
             currentView = firstView
             
@@ -145,6 +157,10 @@ class ViewController: UIViewController {
             firstView.alpha = lightIsOff
             secondView.alpha = lightIsOn
             
+            firstLabelPointer.isHidden = true
+            secondLabelPointer.isHidden = false
+            
+            
             pointer = .third
             currentView = secondView
             
@@ -159,6 +175,9 @@ class ViewController: UIViewController {
         case .third:
             secondView.alpha = lightIsOff
             thirdView.alpha = lightIsOn
+            
+            secondLabelPointer.isHidden = true
+            thirdLabelPointer.isHidden = false
             
             pointer = .first
             currentView = thirdView
@@ -203,10 +222,10 @@ class ViewController: UIViewController {
         thirdRedLabel = "0.00"
         thirdGreenLabel = "0.00"
         thirdBlueLabel = "0.00"
-
-        redSlider.isEnabled = false
-        greenSlider.isEnabled = false
-        blueSlider.isEnabled = false
+        
+        firstLabelPointer.isHidden = true
+        secondLabelPointer.isHidden = true
+        thirdLabelPointer.isHidden = true
         
         redPointsLabel.text = "0.00"
         greenPointsLabel.text = "0.00"
@@ -215,6 +234,10 @@ class ViewController: UIViewController {
         redSlider.value = redSlider.minimumValue
         greenSlider.value = greenSlider.minimumValue
         blueSlider.value = blueSlider.minimumValue
+        
+        redSlider.isEnabled = false
+        greenSlider.isEnabled = false
+        blueSlider.isEnabled = false
 
         firstView.backgroundColor = UIColor(red: 0/256, green: 0/256, blue: 0/256, alpha: 1)
         firstView.alpha = lightIsOff
