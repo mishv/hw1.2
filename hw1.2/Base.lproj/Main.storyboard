@@ -17,16 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGe-2h-ROh">
-                                <rect key="frame" x="98.5" y="582.5" width="178" height="44.5"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="startButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="B2U-m0-LrI"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="G4j-F9-TLt">
                                 <rect key="frame" x="20" y="78" width="335" height="87"/>
                                 <subviews>
@@ -119,24 +109,49 @@
                                     <action selector="blueSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="SP0-iw-V2w"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgX-3x-HPI">
+                                <rect key="frame" x="258" y="539" width="61" height="38"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cPE-Y0-l8r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGe-2h-ROh">
+                                <rect key="frame" x="56" y="539" width="174" height="38"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="startButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="B2U-m0-LrI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gGe-2h-ROh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.47343" id="3Wn-F2-1rw"/>
+                            <constraint firstItem="gGe-2h-ROh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.464" id="4h2-jS-sTT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Af5-mY-TaV" secondAttribute="trailing" constant="20" id="7p9-hF-Ad4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gGe-2h-ROh" secondAttribute="bottom" constant="40" id="BMP-Lz-3Vr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="irI-2G-3n5" secondAttribute="trailing" constant="20" id="DJ3-1c-Hjo"/>
                             <constraint firstItem="JEr-UA-Kvs" firstAttribute="top" secondItem="Af5-mY-TaV" secondAttribute="bottom" constant="16" id="FY3-WR-KWD"/>
                             <constraint firstItem="irI-2G-3n5" firstAttribute="leading" secondItem="8FP-CU-Ol1" secondAttribute="trailing" constant="77.5" id="Jmx-ub-w8I"/>
                             <constraint firstItem="Af5-mY-TaV" firstAttribute="top" secondItem="G4j-F9-TLt" secondAttribute="bottom" priority="750" constant="84" id="KSa-28-XNO"/>
-                            <constraint firstItem="gGe-2h-ROh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QbC-iP-6YW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sgX-3x-HPI" secondAttribute="bottom" constant="90" id="Lis-01-dbZ"/>
+                            <constraint firstItem="sgX-3x-HPI" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0569715" id="MBO-XI-wmu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gGe-2h-ROh" secondAttribute="bottom" constant="90" id="NJV-A7-2le"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sgX-3x-HPI" secondAttribute="trailing" constant="56" id="RK3-tV-MFp"/>
                             <constraint firstItem="irI-2G-3n5" firstAttribute="top" secondItem="JEr-UA-Kvs" secondAttribute="bottom" constant="16" id="SyF-5i-0uo"/>
+                            <constraint firstItem="sgX-3x-HPI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.162667" id="Wo1-hr-k4A"/>
+                            <constraint firstItem="gGe-2h-ROh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="Z3F-l0-l1b"/>
                             <constraint firstItem="G4j-F9-TLt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="b0S-1Y-h1q"/>
                             <constraint firstItem="JEr-UA-Kvs" firstAttribute="leading" secondItem="iCn-ui-1gd" secondAttribute="trailing" constant="77.5" id="bfZ-BL-diq"/>
+                            <constraint firstItem="sgX-3x-HPI" firstAttribute="leading" secondItem="gGe-2h-ROh" secondAttribute="trailing" constant="28" id="izg-dG-8V0"/>
                             <constraint firstItem="yj1-Lu-XFL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kK0-FQ-ad7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G4j-F9-TLt" secondAttribute="trailing" constant="20" id="lIm-Bd-9Ip"/>
-                            <constraint firstItem="gGe-2h-ROh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0669643" id="m4E-Nw-1IN"/>
+                            <constraint firstItem="gGe-2h-ROh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0569715" id="nEH-y5-cLd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JEr-UA-Kvs" secondAttribute="trailing" constant="20" id="qx2-sz-mcA"/>
                             <constraint firstItem="yj1-Lu-XFL" firstAttribute="top" secondItem="G4j-F9-TLt" secondAttribute="bottom" priority="750" constant="90" id="rIb-gs-ovL"/>
                             <constraint firstItem="Af5-mY-TaV" firstAttribute="leading" secondItem="SQd-jN-OcR" secondAttribute="trailing" constant="77.5" id="tik-05-hKQ"/>
@@ -151,6 +166,7 @@
                         <outlet property="greenSlider" destination="JEr-UA-Kvs" id="Q4m-AU-CPn"/>
                         <outlet property="redPointsLabel" destination="mSQ-zg-cwd" id="9aO-Zr-lvW"/>
                         <outlet property="redSlider" destination="Af5-mY-TaV" id="b1S-2s-5xC"/>
+                        <outlet property="resetButton" destination="sgX-3x-HPI" id="kIW-fH-ICY"/>
                         <outlet property="secondView" destination="vWF-il-evm" id="WDs-Gf-mwj"/>
                         <outlet property="startButton" destination="gGe-2h-ROh" id="ZwR-xl-eH0"/>
                         <outlet property="thirdView" destination="ntl-U9-y9v" id="2Tx-4X-U7h"/>
@@ -158,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-214.49275362318843" y="88.392857142857139"/>
+            <point key="canvasLocation" x="-215.19999999999999" y="87.706146926536732"/>
         </scene>
     </scenes>
     <resources>
@@ -170,6 +186,9 @@
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

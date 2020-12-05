@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     @IBOutlet var blueSlider: UISlider!
     
     @IBOutlet var startButton: UIButton!
+    @IBOutlet var resetButton: UIButton!
     
     
     // MARK: - Public Properties
@@ -77,8 +78,17 @@ class ViewController: UIViewController {
         startButton.setTitle("Start", for: .normal)
         startButton.layer.cornerRadius = 7
         
+        resetButton.layer.cornerRadius = 7
+        resetButton.isEnabled = false
+        resetButton.alpha = lightIsOff
+        
+        firstView.backgroundColor = UIColor(red: 0/256, green: 0/256, blue: 0/256, alpha: 1)
         firstView.alpha = lightIsOff
+        
+        secondView.backgroundColor = UIColor(red: 0/256, green: 0/256, blue: 0/256, alpha: 1)
         secondView.alpha = lightIsOff
+        
+        thirdView.backgroundColor = UIColor(red: 0/256, green: 0/256, blue: 0/256, alpha: 1)
         thirdView.alpha = lightIsOff
         
         
@@ -107,6 +117,9 @@ class ViewController: UIViewController {
     // MARK: - IB Actions
     @IBAction func startButtonPressed() {
         startButton.setTitle("Next", for: .normal)
+        
+        resetButton.isEnabled = true
+        resetButton.alpha = lightIsOn
         
         redSlider.isEnabled = true
         greenSlider.isEnabled = true
@@ -160,6 +173,63 @@ class ViewController: UIViewController {
             
         }
         
+    }
+    
+    
+    @IBAction func resetButtonPressed(_ sender: Any) {
+        pointer = Pointer.first
+        currentView = nil
+
+        firstViewRP = 0
+        firstViewGP = 0
+        firstViewBP = 0
+
+        secondViewRP = 0
+        secondViewGP = 0
+        secondViewBP = 0
+
+        thirdViewRP = 0
+        thirdViewGP = 0
+        thirdViewBP = 0
+
+        firstRedLabel = "0.00"
+        firstGreenLabel = "0.00"
+        firstBlueLabel = "0.00"
+
+        secondRedLabel = "0.00"
+        secondGreenLabel = "0.00"
+        secondBlueLabel = "0.00"
+
+        thirdRedLabel = "0.00"
+        thirdGreenLabel = "0.00"
+        thirdBlueLabel = "0.00"
+
+        redSlider.isEnabled = false
+        greenSlider.isEnabled = false
+        blueSlider.isEnabled = false
+        
+        redPointsLabel.text = "0.00"
+        greenPointsLabel.text = "0.00"
+        bluePointsLabel.text = "0.00"
+        
+        redSlider.value = redSlider.minimumValue
+        greenSlider.value = greenSlider.minimumValue
+        blueSlider.value = blueSlider.minimumValue
+
+        firstView.backgroundColor = UIColor(red: 0/256, green: 0/256, blue: 0/256, alpha: 1)
+        firstView.alpha = lightIsOff
+
+        secondView.backgroundColor = UIColor(red: 0/256, green: 0/256, blue: 0/256, alpha: 1)
+        secondView.alpha = lightIsOff
+
+        thirdView.backgroundColor = UIColor(red: 0/256, green: 0/256, blue: 0/256, alpha: 1)
+        thirdView.alpha = lightIsOff
+        
+        startButton.setTitle("Start", for: .normal)
+
+        resetButton.alpha = lightIsOff
+        resetButton.isEnabled = false
+
     }
     
     
