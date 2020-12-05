@@ -146,14 +146,14 @@
                     <connections>
                         <outlet property="bluePointsLabel" destination="nY4-r6-ICy" id="MgN-VP-e4i"/>
                         <outlet property="blueSlider" destination="irI-2G-3n5" id="0yf-r8-SuP"/>
-                        <outlet property="greenLightView" destination="ntl-U9-y9v" id="KYe-eh-LCw"/>
+                        <outlet property="firstView" destination="ZSS-Qy-Z7H" id="Qsq-u3-zpi"/>
                         <outlet property="greenPointsLabel" destination="6gB-HK-hBS" id="GUh-FB-4mr"/>
                         <outlet property="greenSlider" destination="JEr-UA-Kvs" id="Q4m-AU-CPn"/>
-                        <outlet property="redLightView" destination="ZSS-Qy-Z7H" id="VCL-bi-H3q"/>
                         <outlet property="redPointsLabel" destination="mSQ-zg-cwd" id="9aO-Zr-lvW"/>
                         <outlet property="redSlider" destination="Af5-mY-TaV" id="b1S-2s-5xC"/>
+                        <outlet property="secondView" destination="vWF-il-evm" id="WDs-Gf-mwj"/>
                         <outlet property="startButton" destination="gGe-2h-ROh" id="ZwR-xl-eH0"/>
-                        <outlet property="yellowLightView" destination="vWF-il-evm" id="RMH-xk-Njx"/>
+                        <outlet property="thirdView" destination="ntl-U9-y9v" id="2Tx-4X-U7h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
