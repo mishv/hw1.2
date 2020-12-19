@@ -37,9 +37,6 @@ class SettingsViewController: UIViewController {
     var viewGreenPoints: CGFloat = 255
     var viewBluePoints: CGFloat = 255
 
-    var firstRedLabel: String = "0"
-    var firstGreenLabel: String = "0"
-    var firstBlueLabel: String = "0"
     
     
     // MARK: - Life Cycle Methods
@@ -59,15 +56,15 @@ class SettingsViewController: UIViewController {
     // MARK: Sliders
         redSlider.minimumValue = 0
         redSlider.maximumValue = 255
-        redSlider.value = 0
+        //redSlider.value = 0
 
         greenSlider.minimumValue = 0
         greenSlider.maximumValue = 255
-        greenSlider.value = 0
+        //greenSlider.value = 0
 
         blueSlider.minimumValue = 0
         blueSlider.maximumValue = 255
-        blueSlider.value = 0
+        //blueSlider.value = 0
         
     }
     

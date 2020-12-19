@@ -75,10 +75,12 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgX-3x-HPI">
-                                <rect key="frame" x="121" y="461" width="133" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgX-3x-HPI">
+                                <rect key="frame" x="131.5" y="461" width="112" height="32"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sgX-3x-HPI" secondAttribute="height" multiplier="7:2" id="Obu-rg-lae"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Reset"/>
@@ -90,19 +92,31 @@
                                 <rect key="frame" x="126" y="276" width="231" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="INI-AP-V6m" secondAttribute="height" multiplier="227:30" id="lcu-F5-poF"/>
+                                    <constraint firstAttribute="width" constant="227" id="nQL-Wj-Xvz"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="redSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="1fR-fB-xsP"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="o74-ac-pQ3">
                                 <rect key="frame" x="126" y="322" width="231" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="o74-ac-pQ3" secondAttribute="height" multiplier="227:30" id="Qnq-27-A8e"/>
+                                    <constraint firstAttribute="width" constant="227" id="Zfv-FF-msv"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="greenSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="NXv-Nz-Agv"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="76P-N4-a2m">
                                 <rect key="frame" x="126" y="368" width="231" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="76P-N4-a2m" secondAttribute="height" multiplier="227:30" id="AiK-cr-avP"/>
+                                    <constraint firstAttribute="width" constant="227" id="gqf-9z-IdO"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="blueSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="2gz-jj-8t5"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -110,15 +124,20 @@
                         <constraints>
                             <constraint firstItem="o74-ac-pQ3" firstAttribute="top" secondItem="INI-AP-V6m" secondAttribute="bottom" constant="16" id="1Z9-m0-lRZ"/>
                             <constraint firstItem="yj1-Lu-XFL" firstAttribute="top" secondItem="ZSS-Qy-Z7H" secondAttribute="bottom" constant="30" id="2aT-vN-MKY"/>
-                            <constraint firstItem="o74-ac-pQ3" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" constant="25" id="FDm-0B-7Qs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="INI-AP-V6m" secondAttribute="trailing" constant="20" id="30d-2z-z3L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="76P-N4-a2m" secondAttribute="trailing" constant="20" id="EOK-5Q-Keq"/>
+                            <constraint firstItem="o74-ac-pQ3" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" priority="750" constant="25" id="FDm-0B-7Qs"/>
+                            <constraint firstItem="sgX-3x-HPI" firstAttribute="top" secondItem="76P-N4-a2m" secondAttribute="bottom" constant="63" id="FZy-HL-FF9"/>
                             <constraint firstItem="76P-N4-a2m" firstAttribute="top" secondItem="o74-ac-pQ3" secondAttribute="bottom" constant="16" id="GjK-IA-cng"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZSS-Qy-Z7H" secondAttribute="trailing" constant="16" id="HJx-w3-WSd"/>
                             <constraint firstItem="ZSS-Qy-Z7H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KKX-i6-viA"/>
-                            <constraint firstItem="76P-N4-a2m" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" constant="25" id="PWl-EA-aGI"/>
+                            <constraint firstItem="76P-N4-a2m" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" priority="750" constant="25" id="PWl-EA-aGI"/>
                             <constraint firstItem="ZSS-Qy-Z7H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="Pn4-Pa-EEY"/>
-                            <constraint firstItem="INI-AP-V6m" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" constant="25" id="hbu-K6-FBx"/>
+                            <constraint firstItem="sgX-3x-HPI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aaM-Fs-M2I"/>
+                            <constraint firstItem="INI-AP-V6m" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" priority="750" constant="25" id="hbu-K6-FBx"/>
                             <constraint firstItem="yj1-Lu-XFL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mUV-4i-WYC"/>
                             <constraint firstItem="INI-AP-V6m" firstAttribute="top" secondItem="ZSS-Qy-Z7H" secondAttribute="bottom" constant="24" id="whD-OH-9sQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o74-ac-pQ3" secondAttribute="trailing" constant="20" id="x5o-sS-ibZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="🌈Pallette" id="4M5-gx-7tC">
@@ -126,9 +145,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bluePointsLabel" destination="nY4-r6-ICy" id="Pxy-Ls-uG0"/>
+                        <outlet property="blueSlider" destination="76P-N4-a2m" id="R0N-F3-PFZ"/>
                         <outlet property="colorView" destination="ZSS-Qy-Z7H" id="dcC-sL-xjI"/>
                         <outlet property="greenPointsLabel" destination="6gB-HK-hBS" id="ZJg-CA-JZW"/>
+                        <outlet property="greenSlider" destination="o74-ac-pQ3" id="caJ-cu-fVK"/>
                         <outlet property="redPointsLabel" destination="mSQ-zg-cwd" id="CuQ-Pw-Mmw"/>
+                        <outlet property="redSlider" destination="INI-AP-V6m" id="kpZ-MG-WW1"/>
                         <outlet property="resetButton" destination="sgX-3x-HPI" id="MSG-kb-XEn"/>
                     </connections>
                 </viewController>
