@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3tL-pn-F6s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -76,7 +76,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgX-3x-HPI">
-                                <rect key="frame" x="258" y="539" width="61" height="38"/>
+                                <rect key="frame" x="121" y="461" width="133" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
@@ -86,62 +86,50 @@
                                     <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cPE-Y0-l8r"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGe-2h-ROh">
-                                <rect key="frame" x="56" y="539" width="174" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="startButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="B2U-m0-LrI"/>
-                                </connections>
-                            </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Af5-mY-TaV">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="INI-AP-V6m">
                                 <rect key="frame" x="126" y="276" width="231" height="31"/>
-                                <connections>
-                                    <action selector="redSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="3dK-B0-gZe"/>
-                                </connections>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="INI-AP-V6m" secondAttribute="height" multiplier="227:30" id="lcu-F5-poF"/>
+                                </constraints>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JEr-UA-Kvs">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="o74-ac-pQ3">
                                 <rect key="frame" x="126" y="322" width="231" height="31"/>
-                                <connections>
-                                    <action selector="greenSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Rcu-nZ-uwM"/>
-                                </connections>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="o74-ac-pQ3" secondAttribute="height" multiplier="227:30" id="Qnq-27-A8e"/>
+                                </constraints>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="irI-2G-3n5">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="76P-N4-a2m">
                                 <rect key="frame" x="126" y="368" width="231" height="31"/>
-                                <connections>
-                                    <action selector="blueSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="SP0-iw-V2w"/>
-                                </connections>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="76P-N4-a2m" secondAttribute="height" multiplier="227:30" id="AiK-cr-avP"/>
+                                </constraints>
                             </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="irI-2G-3n5" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" constant="25" id="01T-dk-rV5"/>
+                            <constraint firstItem="o74-ac-pQ3" firstAttribute="top" secondItem="INI-AP-V6m" secondAttribute="bottom" constant="16" id="1Z9-m0-lRZ"/>
                             <constraint firstItem="yj1-Lu-XFL" firstAttribute="top" secondItem="ZSS-Qy-Z7H" secondAttribute="bottom" constant="30" id="2aT-vN-MKY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Af5-mY-TaV" secondAttribute="trailing" constant="20" id="4Zq-SE-vkZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="irI-2G-3n5" secondAttribute="trailing" constant="20" id="Fo9-5f-4Uu"/>
+                            <constraint firstItem="o74-ac-pQ3" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" constant="25" id="FDm-0B-7Qs"/>
+                            <constraint firstItem="76P-N4-a2m" firstAttribute="top" secondItem="o74-ac-pQ3" secondAttribute="bottom" constant="16" id="GjK-IA-cng"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZSS-Qy-Z7H" secondAttribute="trailing" constant="16" id="HJx-w3-WSd"/>
                             <constraint firstItem="ZSS-Qy-Z7H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KKX-i6-viA"/>
-                            <constraint firstItem="irI-2G-3n5" firstAttribute="top" secondItem="JEr-UA-Kvs" secondAttribute="bottom" constant="16" id="KUH-pa-Bxh"/>
+                            <constraint firstItem="76P-N4-a2m" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" constant="25" id="PWl-EA-aGI"/>
                             <constraint firstItem="ZSS-Qy-Z7H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="Pn4-Pa-EEY"/>
-                            <constraint firstItem="JEr-UA-Kvs" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" constant="25" id="Q76-5z-Lwc"/>
-                            <constraint firstItem="JEr-UA-Kvs" firstAttribute="top" secondItem="Af5-mY-TaV" secondAttribute="bottom" constant="16" id="Xuw-b9-FKW"/>
-                            <constraint firstItem="Af5-mY-TaV" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" constant="25" id="Zup-zP-Gp4"/>
-                            <constraint firstItem="Af5-mY-TaV" firstAttribute="top" secondItem="ZSS-Qy-Z7H" secondAttribute="bottom" constant="24" id="kKs-2p-MOc"/>
+                            <constraint firstItem="INI-AP-V6m" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" constant="25" id="hbu-K6-FBx"/>
                             <constraint firstItem="yj1-Lu-XFL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mUV-4i-WYC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JEr-UA-Kvs" secondAttribute="trailing" constant="20" id="utp-bK-zDO"/>
+                            <constraint firstItem="INI-AP-V6m" firstAttribute="top" secondItem="ZSS-Qy-Z7H" secondAttribute="bottom" constant="24" id="whD-OH-9sQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="🌈Pallette" id="4M5-gx-7tC">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="0ZI-oZ-Q3J"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="blueSlider" destination="irI-2G-3n5" id="0yf-r8-SuP"/>
-                        <outlet property="greenSlider" destination="JEr-UA-Kvs" id="Q4m-AU-CPn"/>
-                        <outlet property="redSlider" destination="Af5-mY-TaV" id="b1S-2s-5xC"/>
+                        <outlet property="bluePointsLabel" destination="nY4-r6-ICy" id="Pxy-Ls-uG0"/>
+                        <outlet property="colorView" destination="ZSS-Qy-Z7H" id="dcC-sL-xjI"/>
+                        <outlet property="greenPointsLabel" destination="6gB-HK-hBS" id="ZJg-CA-JZW"/>
+                        <outlet property="redPointsLabel" destination="mSQ-zg-cwd" id="CuQ-Pw-Mmw"/>
+                        <outlet property="resetButton" destination="sgX-3x-HPI" id="MSG-kb-XEn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -314,9 +302,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
