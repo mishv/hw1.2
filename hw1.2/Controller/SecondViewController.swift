@@ -12,7 +12,12 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        showAlert()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let settingsVC = segue.destination as! SettingsViewController
+        settingsVC.delegate = self
     }
     
     
@@ -20,15 +25,24 @@ class SecondViewController: UIViewController {
         performSegue(withIdentifier: "settingsSegue", sender: nil)
     }
     
+    func showAlert() {
+        let alert = UIAlertController(title: "", message: "Tap \"🎨\" to change the color of this view.", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okButton)
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        present(alert, animated: true, completion: nil)
     }
-    */
+    
+//    @IBAction func unwindSegueToSecondVC(segue: UIStoryboardSegue) {
+//
+//    }
+    
 
+}
+
+extension SecondViewController: SettingsViewControllerDelegate {
+    func saveColor(redPoints: CGFloat, greenPoints: CGFloat, bluePoints: CGFloat) {
+        view.backgroundColor = UIColor(red: redPoints, green: greenPoints, blue: bluePoints, alpha: 1)
+        
+    }
 }

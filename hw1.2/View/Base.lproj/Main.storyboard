@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3tL-pn-F6s">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -76,10 +76,10 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgX-3x-HPI">
-                                <rect key="frame" x="131.5" y="461" width="112" height="32"/>
+                                <rect key="frame" x="131.5" y="462" width="112" height="32"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="sgX-3x-HPI" secondAttribute="height" multiplier="7:2" id="Obu-rg-lae"/>
+                                    <constraint firstAttribute="width" secondItem="sgX-3x-HPI" secondAttribute="height" multiplier="7:2" id="f9r-6y-zLl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,30 +90,18 @@
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="INI-AP-V6m">
                                 <rect key="frame" x="126" y="276" width="231" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="INI-AP-V6m" secondAttribute="height" multiplier="227:30" id="lcu-F5-poF"/>
-                                    <constraint firstAttribute="width" constant="227" id="nQL-Wj-Xvz"/>
-                                </constraints>
                                 <connections>
                                     <action selector="redSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="1fR-fB-xsP"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="o74-ac-pQ3">
                                 <rect key="frame" x="126" y="322" width="231" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="o74-ac-pQ3" secondAttribute="height" multiplier="227:30" id="Qnq-27-A8e"/>
-                                    <constraint firstAttribute="width" constant="227" id="Zfv-FF-msv"/>
-                                </constraints>
                                 <connections>
                                     <action selector="greenSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="NXv-Nz-Agv"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="76P-N4-a2m">
                                 <rect key="frame" x="126" y="368" width="231" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="76P-N4-a2m" secondAttribute="height" multiplier="227:30" id="AiK-cr-avP"/>
-                                    <constraint firstAttribute="width" constant="227" id="gqf-9z-IdO"/>
-                                </constraints>
                                 <connections>
                                     <action selector="blueSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="2gz-jj-8t5"/>
                                 </connections>
@@ -122,26 +110,31 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="o74-ac-pQ3" firstAttribute="top" secondItem="INI-AP-V6m" secondAttribute="bottom" constant="16" id="1Z9-m0-lRZ"/>
                             <constraint firstItem="yj1-Lu-XFL" firstAttribute="top" secondItem="ZSS-Qy-Z7H" secondAttribute="bottom" constant="30" id="2aT-vN-MKY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="INI-AP-V6m" secondAttribute="trailing" constant="20" id="30d-2z-z3L"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="76P-N4-a2m" secondAttribute="trailing" constant="20" id="EOK-5Q-Keq"/>
-                            <constraint firstItem="o74-ac-pQ3" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" priority="750" constant="25" id="FDm-0B-7Qs"/>
-                            <constraint firstItem="sgX-3x-HPI" firstAttribute="top" secondItem="76P-N4-a2m" secondAttribute="bottom" constant="63" id="FZy-HL-FF9"/>
-                            <constraint firstItem="76P-N4-a2m" firstAttribute="top" secondItem="o74-ac-pQ3" secondAttribute="bottom" constant="16" id="GjK-IA-cng"/>
+                            <constraint firstItem="sgX-3x-HPI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3fn-h8-9rT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o74-ac-pQ3" secondAttribute="trailing" constant="20" id="7de-h7-5Fi"/>
+                            <constraint firstItem="sgX-3x-HPI" firstAttribute="top" secondItem="76P-N4-a2m" secondAttribute="bottom" constant="64" id="ARq-2E-Mwu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="76P-N4-a2m" secondAttribute="trailing" constant="20" id="Bta-4J-4Yl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZSS-Qy-Z7H" secondAttribute="trailing" constant="16" id="HJx-w3-WSd"/>
+                            <constraint firstItem="76P-N4-a2m" firstAttribute="leading" secondItem="8FP-CU-Ol1" secondAttribute="trailing" constant="65.5" id="IiP-eM-GXv"/>
                             <constraint firstItem="ZSS-Qy-Z7H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KKX-i6-viA"/>
-                            <constraint firstItem="76P-N4-a2m" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" priority="750" constant="25" id="PWl-EA-aGI"/>
                             <constraint firstItem="ZSS-Qy-Z7H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="Pn4-Pa-EEY"/>
-                            <constraint firstItem="sgX-3x-HPI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aaM-Fs-M2I"/>
-                            <constraint firstItem="INI-AP-V6m" firstAttribute="leading" secondItem="yj1-Lu-XFL" secondAttribute="trailing" priority="750" constant="25" id="hbu-K6-FBx"/>
+                            <constraint firstItem="o74-ac-pQ3" firstAttribute="top" secondItem="INI-AP-V6m" secondAttribute="bottom" constant="16" id="TAC-Gk-Oj3"/>
+                            <constraint firstItem="o74-ac-pQ3" firstAttribute="leading" secondItem="iCn-ui-1gd" secondAttribute="trailing" constant="65.5" id="eJZ-AR-2Da"/>
+                            <constraint firstItem="76P-N4-a2m" firstAttribute="top" secondItem="o74-ac-pQ3" secondAttribute="bottom" constant="16" id="fBc-10-bwZ"/>
+                            <constraint firstItem="INI-AP-V6m" firstAttribute="top" secondItem="ZSS-Qy-Z7H" secondAttribute="bottom" constant="24" id="g4G-i7-rgD"/>
                             <constraint firstItem="yj1-Lu-XFL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mUV-4i-WYC"/>
-                            <constraint firstItem="INI-AP-V6m" firstAttribute="top" secondItem="ZSS-Qy-Z7H" secondAttribute="bottom" constant="24" id="whD-OH-9sQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o74-ac-pQ3" secondAttribute="trailing" constant="20" id="x5o-sS-ibZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="INI-AP-V6m" secondAttribute="trailing" constant="20" id="uEU-YP-nsw"/>
+                            <constraint firstItem="INI-AP-V6m" firstAttribute="leading" secondItem="SQd-jN-OcR" secondAttribute="trailing" constant="65.5" id="vCM-Md-bEA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="🌈Pallette" id="4M5-gx-7tC">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="0ZI-oZ-Q3J"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="0ZI-oZ-Q3J">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="BYZ-38-t0r" id="2hh-yQ-i9I"/>
+                                <segue destination="hLr-Fb-emK" kind="unwind" unwindAction="unwindSegueToSecondVCWithSegue:" id="zN6-zT-IO4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bluePointsLabel" destination="nY4-r6-ICy" id="Pxy-Ls-uG0"/>
@@ -155,6 +148,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="hLr-Fb-emK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1269.5999999999999" y="87.706146926536732"/>
         </scene>

@@ -7,7 +7,9 @@
 
 import UIKit
 
-
+protocol SettingsViewControllerDelegate: AnyObject {
+    func saveColor(redPoints: CGFloat, greenPoints: CGFloat, bluePoints: CGFloat)
+}
 
 class SettingsViewController: UIViewController {
     
@@ -27,11 +29,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet var resetButton: UIButton!
     
     
-    // MARK: - Public Properties
+    // MARK: - Properties
     
-    
-    
-    // Data Storage
+    weak var delegate:SettingsViewControllerDelegate?
     
     var viewRedPoints: CGFloat = 255
     var viewGreenPoints: CGFloat = 255
@@ -40,42 +40,38 @@ class SettingsViewController: UIViewController {
     
     
     // MARK: - Life Cycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        redSlider.value = 255
-        greenSlider.value = 255
-        blueSlider.value = 255
-    
-        resetButton.layer.cornerRadius = 7
+        redPointsLabel.text = "255"
+        greenPointsLabel.text = "255"
+        bluePointsLabel.text = "255"
         
-        colorView.backgroundColor = UIColor(red: viewRedPoints/255, green: viewGreenPoints/255, blue: viewBluePoints/255, alpha: 1)
-        
-        
-        
-    // MARK: Sliders
         redSlider.minimumValue = 0
         redSlider.maximumValue = 255
-        //redSlider.value = 0
 
         greenSlider.minimumValue = 0
         greenSlider.maximumValue = 255
-        //greenSlider.value = 0
 
         blueSlider.minimumValue = 0
         blueSlider.maximumValue = 255
-        //blueSlider.value = 0
+        
+        redSlider.value = redSlider.maximumValue
+        greenSlider.value = greenSlider.maximumValue
+        blueSlider.value = blueSlider.maximumValue
+    
+        resetButton.layer.cornerRadius = 7
+        colorView.layer.cornerRadius = 7
+        
+        colorView.backgroundColor = UIColor(red: viewRedPoints/255, green: viewGreenPoints/255, blue: viewBluePoints/255, alpha: 1)
         
     }
     
-//    override func viewWillLayoutSubviews() {
-//
-//
-//    }
+
     
     // MARK: - IB Actions
     
-
     @IBAction func resetButtonPressed(_ sender: Any) {
     
         viewRedPoints = 255
@@ -95,42 +91,36 @@ class SettingsViewController: UIViewController {
     }
     
     
+    @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
+        delegate?.saveColor(redPoints: viewRedPoints, greenPoints: viewGreenPoints, bluePoints: viewBluePoints)
+        dismiss(animated: true)
+    }
+    
+    
+    // MARK: - Sliders
+    
     @IBAction func redSliderAction(_ sender: Any) {
-        
         
             viewRedPoints = CGFloat(redSlider.value)
             colorView.backgroundColor = UIColor(red: viewRedPoints/255, green: viewGreenPoints/255, blue: viewBluePoints/255, alpha: 1)
             redPointsLabel.text = String(Int(redSlider.value))
             
-            
-        
-    
     }
     
     @IBAction func greenSliderAction(_ sender: Any) {
 
-        
             viewGreenPoints = CGFloat(greenSlider.value)
             colorView.backgroundColor = UIColor(red: viewRedPoints/255, green: viewGreenPoints/255, blue: viewBluePoints/255, alpha: 1)
             greenPointsLabel.text = String(Int(greenSlider.value))
             
-            
-        
-        
-        
     }
     
     @IBAction func blueSliderAction(_ sender: Any) {
 
-        
             viewBluePoints = CGFloat(blueSlider.value)
             colorView.backgroundColor = UIColor(red: viewRedPoints/255, green: viewGreenPoints/255, blue:  viewBluePoints/255, alpha: 1)
             bluePointsLabel.text = String(Int(blueSlider.value))
-            
-            
         
-        
-    
     }
     
 }
