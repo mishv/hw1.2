@@ -33,19 +33,19 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQd-jN-OcR">
                                                 <rect key="frame" x="16.5" y="0.0" width="30" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.96456852059999998" green="0.51827272049999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCn-ui-1gd">
                                                 <rect key="frame" x="0.0" y="45.5" width="46.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.96456852059999998" green="0.51827272049999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FP-CU-Ol1">
                                                 <rect key="frame" x="13" y="91" width="33.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" red="0.96456852059999998" green="0.51827272049999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -56,19 +56,19 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSQ-zg-cwd">
                                                 <rect key="frame" x="0.0" y="0.0" width="10.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gB-HK-hBS">
                                                 <rect key="frame" x="0.0" y="45.5" width="10.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nY4-r6-ICy">
                                                 <rect key="frame" x="0.0" y="91" width="10.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -77,7 +77,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgX-3x-HPI">
                                 <rect key="frame" x="131.5" y="418" width="112" height="32"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="backgroundColor" red="1" green="0.0012503010419999999" blue="0.97753510860000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sgX-3x-HPI" secondAttribute="height" multiplier="7:2" id="f9r-6y-zLl"/>
                                 </constraints>
@@ -90,18 +90,24 @@
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="INI-AP-V6m">
                                 <rect key="frame" x="126" y="232" width="231" height="31"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="redSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="1fR-fB-xsP"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="o74-ac-pQ3">
                                 <rect key="frame" x="126" y="278" width="231" height="31"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="greenSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="NXv-Nz-Agv"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="76P-N4-a2m">
                                 <rect key="frame" x="126" y="324" width="231" height="31"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="blueSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="2gz-jj-8t5"/>
                                 </connections>
@@ -114,6 +120,7 @@
                                 <items>
                                     <navigationItem title="🌈Pallette" id="dal-fe-PRd">
                                         <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="0yI-ZW-4Yp">
+                                            <color key="tintColor" systemColor="systemPinkColor"/>
                                             <connections>
                                                 <action selector="doneButtonPressed:" destination="BYZ-38-t0r" id="kfK-9C-vo4"/>
                                             </connections>
@@ -123,7 +130,7 @@
                             </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="yj1-Lu-XFL" firstAttribute="top" secondItem="ZSS-Qy-Z7H" secondAttribute="bottom" constant="30" id="2aT-vN-MKY"/>
                             <constraint firstItem="sgX-3x-HPI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3fn-h8-9rT"/>
@@ -173,11 +180,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="🌈Pallette" id="ff6-WI-7aR">
                         <barButtonItem key="leftBarButtonItem" title="Log Out" id="yUA-t9-NHa">
+                            <color key="tintColor" red="0.96456852059999998" green="0.51827272049999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="9Mp-xI-g6e" kind="unwind" unwindAction="unwindSegueToMainScreenWithSegue:" id="kc7-xn-OIl"/>
+                                <segue destination="9Mp-xI-g6e" kind="unwind" unwindAction="unwindSegueToMainScreenWithSegue:" id="c2v-Wp-r3i"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="paintpalette" catalog="system" id="ScS-Av-Qdk">
+                            <color key="tintColor" red="0.96456852059999998" green="0.51827272049999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="settingsButtonTapped:" destination="Pk3-su-pRY" id="RX1-0m-1PH"/>
                             </connections>
@@ -208,6 +217,7 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6c-AS-JFz">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="4Ng-Qr-CdM"/>
                                                 </constraints>
@@ -219,6 +229,7 @@
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ko0-eV-nKW">
                                                 <rect key="frame" x="0.0" y="50" width="343" height="40"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Nxj-CF-mnn"/>
                                                 </constraints>
@@ -232,7 +243,7 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gnu-N6-BHf">
                                         <rect key="frame" x="0.0" y="114" width="343" height="40"/>
-                                        <color key="backgroundColor" red="0.0" green="0.64271505309999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.0012503010419558924" blue="0.97753510861865001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Nak-IA-uII"/>
                                         </constraints>
@@ -249,7 +260,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ge-lW-C5L">
                                                 <rect key="frame" x="0.0" y="0.0" width="125.5" height="26"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                <state key="normal" title="Forgot User Name?"/>
+                                                <state key="normal" title="Forgot User Name?">
+                                                    <color key="titleColor" red="0.96456852064570742" green="0.51827272045183004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="namePromptTapped:" destination="3tL-pn-F6s" eventType="touchUpInside" id="p3g-PM-iqa"/>
                                                 </connections>
@@ -257,7 +270,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXd-mS-TBS">
                                                 <rect key="frame" x="217.5" y="0.0" width="125.5" height="26"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                <state key="normal" title="Forgot Password?"/>
+                                                <state key="normal" title="Forgot Password?">
+                                                    <color key="titleColor" red="0.96456852059999998" green="0.51827272049999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="passPromptTapped:" destination="3tL-pn-F6s" eventType="touchUpInside" id="lVf-8A-IlC"/>
                                                 </connections>
@@ -269,12 +284,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌈Pallette" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ql-Uj-PXq">
                                 <rect key="frame" x="16" y="144" width="343" height="54.5"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="34"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hDc-QC-cOL"/>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8ql-Uj-PXq" firstAttribute="leading" secondItem="hDc-QC-cOL" secondAttribute="leading" constant="16" id="11O-dl-g9K"/>
                             <constraint firstItem="1ft-Mo-N0q" firstAttribute="top" secondItem="8ql-Uj-PXq" secondAttribute="bottom" constant="37" id="1xV-AI-Vcf"/>
@@ -301,7 +316,7 @@
         <!--Navigation Controller-->
         <scene sceneID="GhF-GF-E12">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="CSN-Gv-haJ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="CSN-Gv-haJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="uaU-3k-Tk9"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -327,17 +342,11 @@
     </scenes>
     <resources>
         <image name="paintpalette" catalog="system" width="128" height="105"/>
-        <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

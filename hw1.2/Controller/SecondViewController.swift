@@ -25,11 +25,12 @@ class SecondViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let settingsVC = segue.destination as! SettingsViewController
-        settingsVC.delegate = self
-        settingsVC.viewRedPoints = redPoints
-        settingsVC.viewGreenPoints = greenPoints
-        settingsVC.viewBluePoints = bluePoints
+        let settingsVC = segue.destination as? SettingsViewController
+        _ = segue.destination as? LoginViewController
+        settingsVC?.delegate = self
+        settingsVC?.viewRedPoints = redPoints
+        settingsVC?.viewGreenPoints = greenPoints
+        settingsVC?.viewBluePoints = bluePoints
     }
     
     
