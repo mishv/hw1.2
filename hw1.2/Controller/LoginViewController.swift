@@ -79,15 +79,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //let tabBarController = segue.destination as! SecondTabBarController
-        //let dvc = tabBarController.viewControllers?.first as! WelcomeViewController
-        //dvc.name = userNameTF.text ?? ""
-        
-        
-        
-    }
-    
     @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue) {
         userNameTF.text?.removeAll()
         passwordTF.text?.removeAll()

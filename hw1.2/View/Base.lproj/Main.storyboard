@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--🌈Pallette-->
+        <!--Settings View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SettingsViewController" customModule="hw1_2" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSS-Qy-Z7H">
-                                <rect key="frame" x="16" y="122" width="343" height="130"/>
+                                <rect key="frame" x="16" y="78" width="343" height="130"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZSS-Qy-Z7H" secondAttribute="height" multiplier="343:130" id="YOY-vL-Mqe"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="yj1-Lu-XFL">
-                                <rect key="frame" x="16" y="282" width="87" height="111.5"/>
+                                <rect key="frame" x="16" y="238" width="87" height="111.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="FUR-qK-T6K">
                                         <rect key="frame" x="0.0" y="0.0" width="46.5" height="111.5"/>
@@ -76,7 +76,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgX-3x-HPI">
-                                <rect key="frame" x="131.5" y="462" width="112" height="32"/>
+                                <rect key="frame" x="131.5" y="418" width="112" height="32"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sgX-3x-HPI" secondAttribute="height" multiplier="7:2" id="f9r-6y-zLl"/>
@@ -89,23 +89,38 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="INI-AP-V6m">
-                                <rect key="frame" x="126" y="276" width="231" height="31"/>
+                                <rect key="frame" x="126" y="232" width="231" height="31"/>
                                 <connections>
                                     <action selector="redSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="1fR-fB-xsP"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="o74-ac-pQ3">
-                                <rect key="frame" x="126" y="322" width="231" height="31"/>
+                                <rect key="frame" x="126" y="278" width="231" height="31"/>
                                 <connections>
                                     <action selector="greenSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="NXv-Nz-Agv"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="76P-N4-a2m">
-                                <rect key="frame" x="126" y="368" width="231" height="31"/>
+                                <rect key="frame" x="126" y="324" width="231" height="31"/>
                                 <connections>
                                     <action selector="blueSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="2gz-jj-8t5"/>
                                 </connections>
                             </slider>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eqh-BG-CsK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="🌈Pallette" id="dal-fe-PRd">
+                                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="0yI-ZW-4Yp">
+                                            <connections>
+                                                <action selector="doneButtonPressed:" destination="BYZ-38-t0r" id="kfK-9C-vo4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
@@ -114,12 +129,15 @@
                             <constraint firstItem="sgX-3x-HPI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3fn-h8-9rT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o74-ac-pQ3" secondAttribute="trailing" constant="20" id="7de-h7-5Fi"/>
                             <constraint firstItem="sgX-3x-HPI" firstAttribute="top" secondItem="76P-N4-a2m" secondAttribute="bottom" constant="64" id="ARq-2E-Mwu"/>
+                            <constraint firstItem="Eqh-BG-CsK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BYH-ay-nF7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="76P-N4-a2m" secondAttribute="trailing" constant="20" id="Bta-4J-4Yl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZSS-Qy-Z7H" secondAttribute="trailing" constant="16" id="HJx-w3-WSd"/>
                             <constraint firstItem="76P-N4-a2m" firstAttribute="leading" secondItem="8FP-CU-Ol1" secondAttribute="trailing" constant="65.5" id="IiP-eM-GXv"/>
                             <constraint firstItem="ZSS-Qy-Z7H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KKX-i6-viA"/>
+                            <constraint firstItem="Eqh-BG-CsK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LRP-9Q-M9F"/>
                             <constraint firstItem="ZSS-Qy-Z7H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="Pn4-Pa-EEY"/>
                             <constraint firstItem="o74-ac-pQ3" firstAttribute="top" secondItem="INI-AP-V6m" secondAttribute="bottom" constant="16" id="TAC-Gk-Oj3"/>
+                            <constraint firstItem="Eqh-BG-CsK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cUr-5u-ud5"/>
                             <constraint firstItem="o74-ac-pQ3" firstAttribute="leading" secondItem="iCn-ui-1gd" secondAttribute="trailing" constant="65.5" id="eJZ-AR-2Da"/>
                             <constraint firstItem="76P-N4-a2m" firstAttribute="top" secondItem="o74-ac-pQ3" secondAttribute="bottom" constant="16" id="fBc-10-bwZ"/>
                             <constraint firstItem="INI-AP-V6m" firstAttribute="top" secondItem="ZSS-Qy-Z7H" secondAttribute="bottom" constant="24" id="g4G-i7-rgD"/>
@@ -128,14 +146,6 @@
                             <constraint firstItem="INI-AP-V6m" firstAttribute="leading" secondItem="SQd-jN-OcR" secondAttribute="trailing" constant="65.5" id="vCM-Md-bEA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="🌈Pallette" id="4M5-gx-7tC">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="0ZI-oZ-Q3J">
-                            <connections>
-                                <action selector="doneButtonPressed:" destination="BYZ-38-t0r" id="2hh-yQ-i9I"/>
-                                <segue destination="hLr-Fb-emK" kind="unwind" unwindAction="unwindSegueToSecondVCWithSegue:" id="zN6-zT-IO4"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="bluePointsLabel" destination="nY4-r6-ICy" id="Pxy-Ls-uG0"/>
                         <outlet property="blueSlider" destination="76P-N4-a2m" id="R0N-F3-PFZ"/>
@@ -148,7 +158,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="hLr-Fb-emK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1269.5999999999999" y="87.706146926536732"/>
         </scene>
@@ -163,7 +172,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="🌈Pallette" id="ff6-WI-7aR">
-                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="yUA-t9-NHa"/>
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="yUA-t9-NHa">
+                            <connections>
+                                <segue destination="9Mp-xI-g6e" kind="unwind" unwindAction="unwindSegueToMainScreenWithSegue:" id="kc7-xn-OIl"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="paintpalette" catalog="system" id="ScS-Av-Qdk">
                             <connections>
                                 <action selector="settingsButtonTapped:" destination="Pk3-su-pRY" id="RX1-0m-1PH"/>
@@ -171,10 +184,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="settingsSegue" id="CPq-7k-6vT"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="settingsSegue" modalPresentationStyle="fullScreen" id="CPq-7k-6vT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MH5-Oj-FMX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="9Mp-xI-g6e" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="537" y="88"/>
         </scene>

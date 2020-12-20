@@ -44,9 +44,9 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        redPointsLabel.text = "255"
-        greenPointsLabel.text = "255"
-        bluePointsLabel.text = "255"
+        redPointsLabel.text = String(Int(Float(viewRedPoints)))
+        greenPointsLabel.text = String(Int(Float(viewGreenPoints)))
+        bluePointsLabel.text = String(Int(Float(viewBluePoints)))
         
         redSlider.minimumValue = 0
         redSlider.maximumValue = 255
@@ -57,9 +57,9 @@ class SettingsViewController: UIViewController {
         blueSlider.minimumValue = 0
         blueSlider.maximumValue = 255
         
-        redSlider.value = redSlider.maximumValue
-        greenSlider.value = greenSlider.maximumValue
-        blueSlider.value = blueSlider.maximumValue
+        redSlider.value = Float(Int(viewRedPoints))
+        greenSlider.value = Float(Int(viewGreenPoints))
+        blueSlider.value = Float(Int(viewBluePoints))
     
         resetButton.layer.cornerRadius = 7
         colorView.layer.cornerRadius = 7
@@ -73,14 +73,14 @@ class SettingsViewController: UIViewController {
     // MARK: - IB Actions
     
     @IBAction func resetButtonPressed(_ sender: Any) {
-    
-        viewRedPoints = 255
-        viewGreenPoints = 255
-        viewBluePoints = 255
+        
+        viewRedPoints = CGFloat(redSlider.maximumValue)
+        viewGreenPoints = CGFloat(greenSlider.maximumValue)
+        viewBluePoints = CGFloat(blueSlider.maximumValue)
 
-        redPointsLabel.text = "255"
-        greenPointsLabel.text = "255"
-        bluePointsLabel.text = "255"
+        redPointsLabel.text = String(Int(Float(viewRedPoints)))
+        greenPointsLabel.text = String(Int(Float(viewGreenPoints)))
+        bluePointsLabel.text = String(Int(Float(viewBluePoints)))
 
         redSlider.value = redSlider.maximumValue
         greenSlider.value = greenSlider.maximumValue
@@ -124,4 +124,6 @@ class SettingsViewController: UIViewController {
     }
     
 }
+
+
 
